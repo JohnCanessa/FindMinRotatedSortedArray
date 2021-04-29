@@ -9,7 +9,7 @@ We are required to return the smallest element in the provided array.
 If you are interested in my comments I invite you to read the following
 post in my blog:
 
-<T.B.D.>
+https://www.johncanessa.com/2021/04/29/find-minimum-in-rotated-sorted-array/
 
 Remember that the best way to learn is to read and experiment.
 
