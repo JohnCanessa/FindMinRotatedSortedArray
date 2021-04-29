@@ -23,17 +23,18 @@ public class FindMinRotatedArray {
         if (nums.length == 1)
             return nums[0];
 
-        // **** initialization ****
-        int min = nums[0];
+        // **** check if there is no rotation ****
+        if (nums[nums.length - 1] > nums[0])
+            return nums[0];
 
-        // **** ****
-        for (int i = 1; i < nums.length; i++) {
-            if (nums[i] < min)
-                min = nums[i];
+        // **** loop looking for the next smallest value ****
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] > nums[i + 1])
+                return nums[i + 1];
         }
 
-        // **** return min element ****
-        return min;
+        // **** min not found ****
+        return -1;
     }
 
 
@@ -72,15 +73,14 @@ public class FindMinRotatedArray {
                 return nums[mid];
 
             // **** decide which way to go ****
-            if (nums[mid] > nums[0]) {
+            if (nums[mid] > nums[0])
                 left = mid + 1;                 // go right
-            } else {
+            else
                 right = mid - 1;                // go left
-            }
         }
 
-        // **** min not found ****
-        return -1;
+        // **** min not found (needed to keep the compiler happy) ****
+        return 69696969;
     }
 
 
